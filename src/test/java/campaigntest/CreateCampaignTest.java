@@ -37,7 +37,7 @@ public class CreateCampaignTest extends BaseClass {
 		wLib.waitUntilElementToBeVisible(driver, toastMsg);
 		hp.getCloseToastMsg().click();
 		Assert.assertTrue(hp.getToastMsg().getText().contains(CAMPAIGN_NAME));
-		
+		System.out.println("From new workspace");
 
 	}
 
