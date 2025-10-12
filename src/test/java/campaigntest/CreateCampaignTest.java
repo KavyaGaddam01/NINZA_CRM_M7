@@ -66,7 +66,7 @@ public class CreateCampaignTest extends BaseClass {
 		wLib.waitUntilElementToBeVisible(driver, toastMsg);
 		Assert.assertTrue(toastMsg.getText().contains(CAMPAIGN_NAME));
 		hp.getCloseToastMsg().click();
-		System.out.println("CreateCampaignWithStatus");
+		System.out.println("CreateCampaignWithStatustest");
 
 	}
 
