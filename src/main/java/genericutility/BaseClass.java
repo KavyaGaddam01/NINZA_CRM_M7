@@ -60,8 +60,8 @@ public class BaseClass {
 //		public void beforeClass(String BROWSER) throws IOException {
 		System.out.println("Launch the browser");
 		// Launch the browser
-//		String BROWSER = pLib.readDataFromPropertyFile("Browser");
-		String BROWSER=System.getProperty("Browser");
+	String BROWSER = pLib.readDataFromPropertyFile("Browser");
+//		String BROWSER=System.getProperty("Browser");
 		
 		ChromeOptions settings = new ChromeOptions();
 		Map<String, Object> prefs = new HashMap<>();
@@ -94,13 +94,13 @@ public class BaseClass {
 	public void beforeMethod() throws IOException {
 		System.out.println("Login");
 		// Login to Ninza_CRM
-//		String URL = pLib.readDataFromPropertyFile("URL");
-//		String USERNAME = pLib.readDataFromPropertyFile("Username");
-//		String PASSWORD = pLib.readDataFromPropertyFile("Password");
+		String URL = pLib.readDataFromPropertyFile("URL");
+		String USERNAME = pLib.readDataFromPropertyFile("Username");
+		String PASSWORD = pLib.readDataFromPropertyFile("Password");
 		
-		String URL = System.getProperty("URL");
-		String USERNAME = System.getProperty("Username");
-		String PASSWORD = System.getProperty("Password");
+//		String URL = System.getProperty("URL");
+//		String USERNAME = System.getProperty("Username");
+//		String PASSWORD = System.getProperty("Password");
 		
 		LoginPage lp = new LoginPage(driver);
 		lp.loginToApp(USERNAME, PASSWORD, URL);
